@@ -1,0 +1,15 @@
+.main-subject {
+  width: 100%;
+  height: auto;
+  background-image: url("../img/mountain_main.jpg");
+  background-repeat: no-repeat;
+}
+
+.main-subject__title {
+  color: $white;
+}
+
+.main-subject__text {
+  line-height: 27px;
+  color: $white;
+}
