@@ -1,0 +1,26 @@
+.footer-email {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.footer-email__title {
+  &--tablet {
+    display: none;
+  }
+
+  @media (max-width: $width-only-tablet) {
+    &--tablet {
+      display: inline;
+    }
+  }
+
+  &--desktop {
+    display: inline;
+  }
+
+  @media (max-width: $width-only-tablet) {
+    &--desktop {
+      display: none;
+    }
+  }
+}

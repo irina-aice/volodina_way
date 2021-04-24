@@ -1,0 +1,10 @@
+.form__input {
+  font-size: 14px;
+  line-height: 17px;
+  color: $dark-black;
+
+  &::placeholder {
+    color: $deep-grey;
+    opacity: 1;
+  }
+}

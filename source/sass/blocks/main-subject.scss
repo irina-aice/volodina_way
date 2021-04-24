@@ -13,3 +13,9 @@
   line-height: 27px;
   color: $white;
 }
+
+@media (max-width: $width-only-mobile) {
+  .main-subject__text {
+    color: $light-black;
+  }
+}

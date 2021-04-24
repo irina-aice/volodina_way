@@ -2,5 +2,15 @@
   font-size: 14px;
   line-height: 17px;
   font-weight: 500;
-  color: $black;
+  color: $dark-black;
+}
+
+@media (max-width: $width-only-tablet) {
+  .main-nav__link {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+    color: $deep-grey;
+    background-color: $lighter-grey;
+  }
 }
