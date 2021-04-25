@@ -1,6 +1,24 @@
+.countries {
+  @include container;
+  padding-right: 20%;
+}
+
+.countries__list {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 15px;
+  border-bottom: 1px solid $light-grey;
+}
+
 .countries__link {
   font-size: 20px;
   line-height: 24px;
   font-weight: 500;
   color: $light-grey;
+
+  &--current {
+    color: $orange;
+  }
 }

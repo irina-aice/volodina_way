@@ -1,15 +1,28 @@
 .main-subject {
   width: 100%;
   height: auto;
+  min-height: 860px;
   background-image: url("../img/mountain_main.jpg");
   background-repeat: no-repeat;
 }
 
+.main-subject__container {
+  @include container;
+  display: flex;
+}
+
+.main-subject__helper {
+  margin-left: auto;
+}
+
 .main-subject__title {
+  max-width: 412px;
+  padding-top: 185px;
   color: $white;
 }
 
 .main-subject__text {
+  max-width: 376px;
   line-height: 27px;
   color: $white;
 }
@@ -18,4 +31,9 @@
   .main-subject__text {
     color: $light-black;
   }
+}
+
+.main-subject__link {
+  min-width: 340px;
+  padding-left: 40px;
 }

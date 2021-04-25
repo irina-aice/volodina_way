@@ -1,0 +1,22 @@
+.header {
+  @include container;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 36px;
+  padding-bottom: 31px;
+}
+
+.header__phone {
+  margin-left: 53px;
+  margin-right: 11px;
+  padding-left: 36px;
+  font-size: 18px;
+  line-height: 32px;
+  color: $dark-black;
+  text-decoration: underline;
+
+  &:hover {
+    color: $orange;
+  }
+}

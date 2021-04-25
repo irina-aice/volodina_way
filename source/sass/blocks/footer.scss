@@ -1,3 +1,15 @@
+.footer {
+  @include container;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.footer__block {
+  &:not(:last-child) {
+    border-right: 1px solid $bright-grey;
+  }
+}
+
 .footer__title {
   font-size: 18px;
   line-height: 32px;
@@ -5,7 +17,13 @@
   color: $dark-black;
 }
 
+.footer__list-helper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .footer__list {
+  @include reset-list;
   font-size: 14px;
   line-height: 17px;
 }

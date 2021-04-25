@@ -1,8 +1,30 @@
+.main-nav {
+  margin-left: auto;
+}
+
+.main-nav__list {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav__item {
+  &:not(:first-child) {
+    margin-left: 40px;
+  }
+}
+
 .main-nav__link {
   font-size: 14px;
   line-height: 17px;
   font-weight: 500;
   color: $dark-black;
+
+  &:hover {
+    color: $orange;
+  }
 }
 
 @media (max-width: $width-only-tablet) {
@@ -13,4 +35,8 @@
     color: $deep-grey;
     background-color: $lighter-grey;
   }
+}
+
+.main-nav__toggle {
+  display: none;
 }
