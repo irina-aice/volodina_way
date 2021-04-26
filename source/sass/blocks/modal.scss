@@ -17,6 +17,21 @@
   }
 }
 
+@media (max-width: $width-only-mobile) {
+  .modal {
+    max-width: 320px;
+
+    &--form {
+      @include container;
+      display: block;
+    }
+  }
+
+  .modal__image {
+    display: none;
+  }
+}
+
 .modal__title {
   font-weight: 600;
 }

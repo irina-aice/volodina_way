@@ -3,7 +3,18 @@
   max-width: 1170px;
   box-sizing: border-box;
   margin: 0 auto;
+
+  @media (max-width: $width-only-tablet) {
+    padding-left: 21px;
+    padding-right: 21px;
+  }
+
+  @media (max-width: $width-only-tablet) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
+
 
 @mixin reset-list {
   margin: 0;

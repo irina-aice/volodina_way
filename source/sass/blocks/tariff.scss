@@ -1,3 +1,11 @@
+.tariff {
+  border: 1px solid $light-grey;
+  box-sizing: border-box;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  padding: 40px 30px 30px 30px;
+}
+
 .tariff__header {
   font-size: 28px;
   line-height: 38px;
@@ -22,5 +30,31 @@
 }
 
 .tariff__list {
+  min-height: 376px;
   line-height: 32px;
+}
+
+@media (max-width: $width-only-tablet) {
+  .tariff__list {
+    min-height: 378px;
+  }
+}
+
+@media (max-width: $width-only-tablet) {
+  .tariff__list {
+    min-height: auto;
+  }
+}
+
+.tariff__button {
+  width: 100%;
+}
+
+.tariff--complex .tariff__title,
+.tariff--complex .tariff__price {
+  color: $orange;
+}
+
+.tariff--complex {
+  border: 3px solid $orange;
 }

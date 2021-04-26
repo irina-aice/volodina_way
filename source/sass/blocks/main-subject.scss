@@ -2,8 +2,24 @@
   width: 100%;
   height: auto;
   min-height: 860px;
-  background-image: url("../img/mountain_main.jpg");
+  background-image: url("../img/mountain-main.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $blue;
+}
+
+@media (max-width: $width-only-tablet) {
+  .main-subject {
+    min-height: 344px;
+    background-image: url("../img/mountain-main-tablet.jpg");
+  }
+}
+
+@media (max-width: $width-only-mobile) {
+  .main-subject {
+    background-image: none;
+    background-color: transparent;
+  }
 }
 
 .main-subject__container {
@@ -11,8 +27,28 @@
   display: flex;
 }
 
+@media (max-width: $width-only-mobile) {
+  .main-subject__container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .main-subject__helper {
   margin-left: auto;
+}
+
+@media (max-width: $width-only-tablet) {
+  .main-subject__helper {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: $width-only-mobile) {
+  .main-subject__helper {
+    width: 100%;
+    margin: 0;
+  }
 }
 
 .main-subject__title {
@@ -21,14 +57,49 @@
   color: $white;
 }
 
+@media (max-width: $width-only-tablet) {
+  .main-subject__title {
+    max-width: 398px;
+    padding-top: 60px;
+    text-align: center;
+  }
+}
+
+@media (max-width: $width-only-mobile) {
+  .main-subject__title {
+    max-width: none;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: $width-only-mobile) {
+  .main-subject__title-wrapper {
+    min-height: 235px;
+    background-image: url("../img/mountain-main-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
 .main-subject__text {
-  max-width: 376px;
+  max-width: 376px;//why max-width
   line-height: 27px;
   color: $white;
 }
 
+@media (max-width: $width-only-tablet) {
+  .main-subject__text {
+    max-width: 420px;
+    text-align: center;
+  }
+}
+
 @media (max-width: $width-only-mobile) {
   .main-subject__text {
+    max-width: none;
+    margin-left: 16px;
+    margin-right: 16px;
     color: $light-black;
   }
 }
@@ -36,4 +107,24 @@
 .main-subject__link {
   min-width: 340px;
   padding-left: 40px;
+}
+
+@media (max-width: $width-only-tablet) {
+  .main-subject__link {
+    min-width: 250px;
+    text-align: left;
+  }
+}
+
+@media (max-width: $width-only-tablet) {
+  .main-subject__button-wrapper {
+    text-align: center;
+  }
+}
+
+
+@media (max-width: $width-only-mobile) {
+  .main-subject__button-wrapper {
+    @include container;
+  }
 }

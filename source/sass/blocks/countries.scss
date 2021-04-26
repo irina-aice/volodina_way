@@ -3,6 +3,15 @@
   padding-right: 20%;
 }
 
+@media (max-width: $width-only-tablet) {
+  .countries {
+    width: auto;
+    max-width: initial;
+    padding-right: 0;
+    overflow-x: hidden;
+  }
+}
+
 .countries__list {
   @include reset-list;
   display: flex;
@@ -10,6 +19,18 @@
   justify-content: space-between;
   padding-bottom: 15px;
   border-bottom: 1px solid $light-grey;
+}
+
+@media (max-width: $width-only-tablet) {
+  .countries__list {
+    flex-wrap: nowrap;
+    justify-content: initial;
+    overflow-x: auto;
+  }
+
+  .countries__item:not(:first-child) {
+    margin-left: 99px;
+  }
 }
 
 .countries__link {

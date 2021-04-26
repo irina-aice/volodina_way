@@ -1,14 +1,52 @@
 .title {
+  position: relative;
   margin: 0;
   font-size: 55px;
   line-height: 80px;
   font-weight: 600;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 175px;
+    height: 3px;
+    left: 0;
+    top: 100%;
+    background-color: $orange;
+  }
+
+  &--main::after {
+    display: none;
+  }
+
+  &--content::after {
+    width: 68px;
+    height: 1px;
+  }
 }
 
 @media (max-width: $width-only-tablet) {
   .title {
+    text-align: center;
     font-size: 30px;
     line-height: 45px;
+
+    /*&--content::after {
+      content: "";
+      position: absolute;
+      width: 68px;
+      height: 1px;
+      top: 60px;
+      left: 0;
+    }*/
+
+    &::after {
+      display: none;
+    }
+
+    &--content {
+      text-align: left;
+    }
   }
 }
 

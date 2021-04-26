@@ -1,7 +1,17 @@
 .country {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr auto;
   grid-column-gap: 100px;
+}
+
+@media (max-width: $width-only-tablet) {
+  .country {
+    grid-template-columns: auto;
+  }
+
+  .country__inner {
+    @include container;
+  }
 }
 
 .country__title {
@@ -22,4 +32,37 @@
 
 .country__text {
   color: $dark-grey;
+}
+
+@media (max-width: $width-only-tablet) {
+  .country__text {
+    text-align: center;
+  }
+}
+
+@media (max-width: $width-only-tablet) {
+  .country__button {
+    padding-left: 52px;
+    padding-right: 53px;
+  }
+}
+
+@media (max-width: $width-only-mobile) {
+  .country__button {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.country__image-wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 114px auto 115px;
+}
+
+.country__image {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 4;
 }

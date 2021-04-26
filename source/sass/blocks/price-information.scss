@@ -19,6 +19,12 @@
   color: $dark-grey;
 }
 
+@media (max-width: $width-only-tablet) {
+  .price-information__text {
+    text-align: center;
+  }
+}
+
 .price-information__contact {
   color: $dark-black;
 }
@@ -31,6 +37,7 @@
 
 @media (max-width: $width-only-tablet) {
   .price-information__subtitle {
+    text-align: center;
     font-size: 18px;
   }
 }
@@ -43,6 +50,7 @@
 
 @media (max-width: $width-only-tablet) {
   .price-information__phone {
+    text-align: center;
     font-size: 18px;
     color: $orange;
   }

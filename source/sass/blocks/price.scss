@@ -5,9 +5,60 @@
   grid-column-gap: 111px;
 }
 
+@media (max-width: $width-only-tablet) {
+  .price {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-column-gap: 0;
+  }
+}
+
 .price__list {
   @include reset-list;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 30px;
+}
+
+@media (max-width: $width-only-tablet) {
+  .price__list {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-gap: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+}
+
+@media (max-width: $width-only-mobile) {
+  .price__list {
+    grid-template-columns: auto;
+    grid-column-gap: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: $width-only-tablet) {
+  .price__description {
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+}
+
+.price__item {
+  min-width: 370px;
+}
+
+@media (max-width: $width-only-tablet) {
+  .price__item {
+    min-width: auto;
+  }
+}
+
+@media (max-width: $width-only-mobile) {
+  .price__item {
+    min-width: 370px;
+    margin-bottom: 30px;
+  }
 }

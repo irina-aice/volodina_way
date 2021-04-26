@@ -1,4 +1,11 @@
 .country-wrapper {
   @include container;
-  padding-right: 20%;
+  //padding-right: 20%;
+}
+
+@media (max-width: $width-only-tablet) {
+  .country-wrapper {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }

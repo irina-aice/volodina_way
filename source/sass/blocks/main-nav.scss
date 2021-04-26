@@ -10,9 +10,27 @@
   align-items: center;
 }
 
+@media (max-width: $width-only-tablet) {
+  .main-nav__list {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+  }
+}
+
 .main-nav__item {
   &:not(:first-child) {
     margin-left: 40px;
+  }
+}
+
+@media (max-width: $width-only-tablet) {
+  .main-nav__item {
+    margin-bottom: 30px;
+
+    &:not(:first-child) {
+      margin-left: 0;
+    }
   }
 }
 
@@ -39,4 +57,10 @@
 
 .main-nav__toggle {
   display: none;
+}
+
+@media (max-width: $width-only-tablet) {
+  .main-nav__toggle {
+    display: inline-block;
+  }
 }
