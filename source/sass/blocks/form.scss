@@ -1,4 +1,22 @@
+.form__list {
+  @include reset-list;
+  display: flex;
+  justify-content: space-between;
+
+  &--modal {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: $width-only-mobile) {
+  .form__list {
+    flex-direction: column;
+  }
+}
+
 .form__input {
+  min-width: 269px;
+  padding: 16px 0 15px 15px;
   font-size: 14px;
   line-height: 17px;
   color: $dark-black;
@@ -7,4 +25,15 @@
     color: $deep-grey;
     opacity: 1;
   }
+}
+
+@media (max-width: $width-only-mobile) {
+  .form__input {
+    min-width: auto;
+  }
+}
+
+.form__button-wrapper {
+  margin-top: 24px;
+  text-align: center;
 }

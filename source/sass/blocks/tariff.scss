@@ -6,7 +6,16 @@
   padding: 40px 30px 30px 30px;
 }
 
+@media (max-width: $width-only-mobile) {
+  .tariff {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
 .tariff__header {
+  display: flex;
+  justify-content: space-between;
   font-size: 28px;
   line-height: 38px;
   font-weight: 600;
@@ -15,6 +24,8 @@
 
 @media (max-width: $width-only-tablet) {
   .tariff__header {
+    flex-direction: column;
+    text-align: center;
     font-size: 24px;
   }
 }
@@ -26,12 +37,20 @@
 }
 
 .tariff__text {
+  margin-top: 36px;
+  padding-right: 20px;
+  padding-bottom: 28px;
   line-height: 24px;
+  border-bottom: 1px solid $light-grey;
+  box-sizing: border-box;
 }
 
 .tariff__list {
-  min-height: 376px;
+  @include reset-list;
+  margin-top: 30px;
+  min-height: 346px;
   line-height: 32px;
+  //list-style: url("img/sprite.svg#check-orange");
 }
 
 @media (max-width: $width-only-tablet) {
@@ -50,11 +69,42 @@
   width: 100%;
 }
 
+.tariff__item {
+  position: relative;
+  padding-left: 30px;
+  padding-bottom: 12px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 14px;
+    height: 12px;
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.614.21a1 1 0 01.175 1.404l-7.774 10a1 1 0 01-1.477.112l-4.225-4a1 1 0 111.375-1.452l3.424 3.242L12.21.386a1 1 0 011.404-.175z' fill='%23FE7865'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+  }
+}
+
+.tariff:hover .tariff__title,
+.tariff:hover .tariff__price,
 .tariff--complex .tariff__title,
 .tariff--complex .tariff__price {
   color: $orange;
 }
 
+.tariff:hover .tariff__text,
+.tariff--complex .tariff__text {
+  border-color: $orange;
+}
+
+.tariff:hover .tariff__item::before,
+.tariff--complex .tariff__item::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.61.21a1 1 0 01.18 1.4l-7.78 10a1 1 0 01-1.47.12l-4.23-4A1 1 0 111.7 6.27L5.1 9.52l7.1-9.13a1 1 0 011.4-.18z' fill='%23141517'/%3E%3C/svg%3E");
+}
+
+.tariff:hover,
 .tariff--complex {
-  border: 3px solid $orange;
+  border: 1px solid $orange;
+  box-shadow: 0 0 0 3px $orange;
 }

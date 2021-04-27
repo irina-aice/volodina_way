@@ -1,0 +1,14 @@
+.logo__icon--tablet {
+  display: none;
+}
+
+@media (max-width: $width-only-tablet) {
+  .logo__icon--desktop {
+    display: none;
+  }
+
+  .logo__icon--tablet {
+    display: block;
+    margin-left: 21px;
+  }
+}

@@ -7,8 +7,20 @@
   padding-bottom: 31px;
 }
 
+@media (max-width: $width-only-tablet) {
+  .header {
+    position: relative;
+    flex-direction: column;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 15px;
+    padding-top: 17px;
+    align-items: start;
+  }
+}
+
 .header__phone {
-  margin-left: 53px;
+  margin-left: 61px;
   margin-right: 11px;
   padding-left: 36px;
   font-size: 18px;

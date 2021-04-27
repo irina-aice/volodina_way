@@ -3,11 +3,14 @@
 }
 
 .places__text {
+  margin-top: 64px;
+  margin-bottom: 56px;
   color: $dark-grey;
 }
 
 @media (max-width: $width-only-tablet) {
   .places__text {
+    margin-top: 21px;
     text-align: center;
   }
 }
@@ -47,17 +50,19 @@
   &:nth-last-child(1) {
     margin-right: auto;
     margin-left: 60px;
+    margin-bottom: 97px;
   }
 
   &:nth-last-child(2) {
     margin-left: auto;
     margin-right: 60px;
+    margin-bottom: 97px;
   }
 }
 
 @media (max-width: $width-only-tablet) {
   .places__item {
-    max-width: 288px;
+    max-width: none;
     margin-bottom: 19px;
 
     &:nth-last-child(1) {
@@ -68,39 +73,10 @@
     &:nth-last-child(2) {
       margin-left: initial;
       margin-right: initial;
+      margin-bottom: 19px;
     }
   }
 }
-
-@media (max-width: $width-only-mobile) {
-  .places__item {
-    max-width: 288px;
-  }
-}
-
-/*.places__item:nth-last-child(1) {
-  margin-right: auto;
-  margin-left: 60px;
-}*/
-
-/*@media (max-width: $width-only-tablet) {
-  .places__item:nth-last-child(1) {
-    margin-right: auto;
-    margin-left: auto;
-  }
-}*/
-
-/*.places__item:nth-last-child(2) {
-  margin-left: auto;
-  margin-right: 60px;
-}*/
-
-/*@media (max-width: $width-only-tablet) {
-  .places__item:nth-last-child(2) {
-    margin-left: initial;
-    margin-right: initial;
-  }
-}*/
 
 .places__image-helper {
   position: absolute;
@@ -122,8 +98,48 @@
   background-color: $white;
 }
 
+.places__title {
+  margin-top: 199px;
+}
+
 @media (max-width: $width-only-tablet) {
   .places__title br {
     display: none;
+  }
+
+  .places__title {
+    margin-top: 80px;
+  }
+}
+
+.places__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  color: $white;
+
+  &::after {
+    content: "смотреть подробнее";
+    display: none;
+    padding: 30px 25px;
+    border: 1px solid rgba($white, 0.7);
+    font-size: 14px;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    background-color: $overlay;
+  }
+
+  &:hover::after {
+    display: inline-block;
   }
 }

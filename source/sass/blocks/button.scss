@@ -8,8 +8,21 @@
   line-height: 15px;
   font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 2px;
   background-color: $orange;
   color: $white;
+
+  &--details {
+    min-width: 176px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &:hover {
+    background-color: $bright-orange;
+  }
 }
 
 @media (max-width: $width-only-tablet) {

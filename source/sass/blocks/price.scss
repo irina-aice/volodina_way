@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-column-gap: 111px;
+  margin-top: 152px;
 }
 
 @media (max-width: $width-only-tablet) {
@@ -18,6 +19,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 30px;
+  padding-bottom: 3px;
 }
 
 @media (max-width: $width-only-tablet) {
@@ -58,7 +60,7 @@
 
 @media (max-width: $width-only-mobile) {
   .price__item {
-    min-width: 370px;
+    //min-width: 370px;
     margin-bottom: 30px;
   }
 }

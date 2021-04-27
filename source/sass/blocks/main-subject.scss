@@ -36,11 +36,13 @@
 
 .main-subject__helper {
   margin-left: auto;
+  padding-right: 58px;
 }
 
 @media (max-width: $width-only-tablet) {
   .main-subject__helper {
     margin: 0 auto;
+    padding-right: 0;
   }
 }
 
@@ -48,6 +50,7 @@
   .main-subject__helper {
     width: 100%;
     margin: 0;
+    padding-right: 0;
   }
 }
 
@@ -83,7 +86,9 @@
 }
 
 .main-subject__text {
-  max-width: 376px;//why max-width
+  max-width: 376px;
+  margin-top: 30px;
+  margin-bottom: 35px;
   line-height: 27px;
   color: $white;
 }
@@ -91,6 +96,8 @@
 @media (max-width: $width-only-tablet) {
   .main-subject__text {
     max-width: 420px;
+    margin-top: 17px;
+    margin-bottom: 10px;
     text-align: center;
   }
 }

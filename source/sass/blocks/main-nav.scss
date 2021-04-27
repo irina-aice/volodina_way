@@ -2,6 +2,88 @@
   margin-left: auto;
 }
 
+@media (max-width: $width-only-tablet) {
+  .main-nav {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.main-nav__toggle {
+  display: none;
+}
+
+@media (max-width: $width-only-tablet) {
+  .main-nav__toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 72px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    background-color: $orange;
+    border: 0;
+  }
+
+  .main-nav--closed .main-nav__toggle::before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    right: 25px;
+    width: 22.5px;
+    height: 1px;
+    background-color: $white;
+    box-shadow: 0 7px 0 0 $white, 0 13px 0 0 $white;
+  }
+
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
+
+  .main-nav--opened .main-nav__toggle {
+    top: 0;
+    right: 0;
+    background-color: $white;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      right: 14px;
+      width: 23px;
+      height: 1px;
+      background-color: $brighter-grey;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+}
+
+@media (max-width: $width-only-mobile) {
+  .main-nav__toggle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .main-nav--closed .main-nav__toggle::before {
+    top: 17px;
+    right: 20px;
+  }
+}
+
 .main-nav__list {
   @include reset-list;
   display: flex;
@@ -15,6 +97,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: start;
+    padding-top: 134px;
   }
 }
 
@@ -26,6 +109,7 @@
 
 @media (max-width: $width-only-tablet) {
   .main-nav__item {
+    width: 100%;
     margin-bottom: 30px;
 
     &:not(:first-child) {
@@ -47,20 +131,16 @@
 
 @media (max-width: $width-only-tablet) {
   .main-nav__link {
+    display: inline-block;
+    width: 100%;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 16px;
+    box-sizing: border-box;
     font-size: 20px;
     line-height: 28px;
     font-weight: 600;
     color: $deep-grey;
     background-color: $lighter-grey;
-  }
-}
-
-.main-nav__toggle {
-  display: none;
-}
-
-@media (max-width: $width-only-tablet) {
-  .main-nav__toggle {
-    display: inline-block;
   }
 }

@@ -1,6 +1,7 @@
 .countries {
   @include container;
-  padding-right: 20%;
+  padding-right: 14%;
+  margin-bottom: 88px;
 }
 
 @media (max-width: $width-only-tablet) {
@@ -17,7 +18,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
   border-bottom: 1px solid $light-grey;
 }
 
