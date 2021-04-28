@@ -11,6 +11,7 @@
 @media (max-width: $width-only-tablet) {
   .places__text {
     margin-top: 21px;
+    margin-bottom: 39px;
     text-align: center;
   }
 }
@@ -18,6 +19,10 @@
 @media (max-width: $width-only-mobile) {
   .places__text br {
     display: none;
+  }
+
+  .places__text {
+    margin-bottom: 18px;
   }
 }
 
@@ -62,7 +67,7 @@
 
 @media (max-width: $width-only-tablet) {
   .places__item {
-    max-width: none;
+    max-width: 288px;
     margin-bottom: 19px;
 
     &:nth-last-child(1) {
@@ -75,6 +80,23 @@
       margin-right: initial;
       margin-bottom: 19px;
     }
+  }
+}
+
+@media (max-width: $width-only-mobile) {
+  .places__item {
+    max-width: initial;
+    width: 100%;
+    margin-bottom: 30px;
+
+    &:nth-last-child(1) {
+      margin-bottom: 47px;
+    }
+  }
+
+  .places__image {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -109,6 +131,12 @@
 
   .places__title {
     margin-top: 80px;
+  }
+}
+
+@media (max-width: $width-only-mobile) {
+  .places__title {
+    margin-top: 109px;
   }
 }
 

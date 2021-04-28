@@ -8,8 +8,15 @@
   .countries {
     width: auto;
     max-width: initial;
+    margin-bottom: 31px;
     padding-right: 0;
     overflow-x: hidden;
+  }
+}
+
+@media (max-width: $width-only-tablet) {
+  .countries {
+    margin-bottom: 24px;
   }
 }
 

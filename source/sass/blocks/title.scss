@@ -5,14 +5,18 @@
   line-height: 80px;
   font-weight: 600;
 
-  &::after {
+  &--underline::after {
     content: "";
     position: absolute;
-    width: 175px;//228
+    width: 175px;
     height: 3px;
     left: 0;
     top: 119%;
     background-color: $orange;
+  }
+
+  &--places::after {
+    width: 228px;
   }
 
   &--main::after {
@@ -20,8 +24,13 @@
   }
 
   &--content::after {
+    content: "";
+    position: absolute;
     width: 68px;
     height: 1px;
+    left: 0;
+    top: 119%;
+    background-color: $orange;
   }
 }
 
@@ -31,16 +40,7 @@
     font-size: 30px;
     line-height: 45px;
 
-    /*&--content::after {
-      content: "";
-      position: absolute;
-      width: 68px;
-      height: 1px;
-      top: 60px;
-      left: 0;
-    }*/
-
-    &::after {
+    &--underline::after {
       display: none;
     }
 
@@ -54,5 +54,9 @@
   .title {
     font-size: 24px;
     line-height: 36px;
+
+    &--content::after {
+      left: 70px;
+    }
   }
 }

@@ -8,6 +8,17 @@
     display: none;
   }
 
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 34px;
+    height: 28px;
+    background-image: url("../img/e-mail.svg");
+    background-repeat: no-repeat;
+  }
+
   @media (max-width: $width-only-tablet) {
     &--tablet {
       display: inline;

@@ -23,6 +23,11 @@
   &:hover {
     background-color: $bright-orange;
   }
+
+  &--modal {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 @media (max-width: $width-only-tablet) {

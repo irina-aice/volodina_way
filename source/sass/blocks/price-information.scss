@@ -5,12 +5,14 @@
 
 @media (max-width: $width-only-tablet) {
   .price-information__title {
+    margin-top: 84px;
     line-height: 45px;
   }
 }
 
 @media (max-width: $width-only-mobile) {
   .price-information__title {
+    margin-top: 43px;
     line-height: 36px;
   }
 }
@@ -23,7 +25,15 @@
 
 @media (max-width: $width-only-tablet) {
   .price-information__text {
+    margin-top: 21px;
+    margin-bottom: 34px;
     text-align: center;
+  }
+}
+
+@media (max-width: $width-only-mobile) {
+  .price-information__text {
+    margin-bottom: 23px;
   }
 }
 
@@ -40,20 +50,44 @@
 
 @media (max-width: $width-only-tablet) {
   .price-information__subtitle {
+    margin-bottom: 0;
     font-size: 18px;
   }
 }
 
 .price-information__phone {
+  position: relative;
   text-align: center;
   font-size: 20px;
   line-height: 32px;
   color: $black;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/phone.svg");
+  }
 }
 
 @media (max-width: $width-only-tablet) {
   .price-information__phone {
+    margin-top: 10px;
+    margin-bottom: 31px;
     font-size: 18px;
     color: $orange;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $width-only-mobile) {
+  .price-information__phone {
+    margin-bottom: 40px;
   }
 }

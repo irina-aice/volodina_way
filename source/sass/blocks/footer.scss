@@ -41,11 +41,13 @@
   .footer__block {
     &--tour {
       min-width: auto;
-      margin-bottom: 30px;
+      margin-bottom: 23px;
+      margin-left: 5px;
     }
 
     &--contacts {
-      margin-bottom: 30px;
+      margin-bottom: 23px;
+      margin-left: 27px;
     }
 
     &--corporate {
@@ -109,6 +111,18 @@
   color: $dark-black;
 }
 
+@media (max-width: $width-only-tablet) {
+  .footer__title--corporate {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: $width-only-mobile) {
+  .footer__title {
+    text-align: center;
+  }
+}
+
 .footer__list-helper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -158,4 +172,14 @@
   font-size: 14px;
   line-height: 24px;
   color: $grey;
+}
+
+.footer__contacts {
+  position: relative;
+}
+
+@media (max-width: $width-only-mobile) {
+  .footer__contacts {
+    text-align: center;
+  }
 }

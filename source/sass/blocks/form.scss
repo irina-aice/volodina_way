@@ -5,12 +5,24 @@
 
   &--modal {
     flex-direction: column;
+    padding-left: 59px;
+    padding-right: 61px;
+    box-sizing: border-box;
   }
+}
+
+.form__item--modal {
+  margin-bottom: 20px;
 }
 
 @media (max-width: $width-only-mobile) {
   .form__list {
     flex-direction: column;
+  }
+
+  .form__item {
+    width: 100%;
+    margin-bottom: 18px;
   }
 }
 
@@ -30,10 +42,22 @@
 @media (max-width: $width-only-mobile) {
   .form__input {
     min-width: auto;
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 
 .form__button-wrapper {
   margin-top: 24px;
   text-align: center;
+}
+
+.form__button-modal {
+  text-align: center;
+}
+
+@media (max-width: $width-only-mobile) {
+  .form__button-wrapper {
+    margin-top: 0;
+  }
 }

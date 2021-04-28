@@ -21,6 +21,10 @@
   }
 }
 
+.modal__image {
+  max-width: 338px;
+}
+
 @media (max-width: $width-only-mobile) {
   .modal {
     max-width: 320px;
@@ -37,6 +41,7 @@
 }
 
 .modal__title {
+  text-align: center;
   font-weight: 600;
 }
 
@@ -50,4 +55,29 @@
   z-index: 1;
   top: 10px;
   right: 10px;
+  width: 22px;
+  height: 22px;
+  border: none;
+  background-color: transparent;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 23px;
+    height: 1px;
+    background-color: $brighter-grey;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
 }
